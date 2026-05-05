@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
+import glass from "@/assets/winestorming-glass.png";
 
 export function WineSwirl() {
-  const ref = useRef<SVGSVGElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = ref.current;
@@ -10,8 +11,8 @@ export function WineSwirl() {
     let tx = 0, ty = 0, cx = 0, cy = 0;
     const onMove = (e: MouseEvent) => {
       const r = el.getBoundingClientRect();
-      tx = ((e.clientX - r.left) / r.width - 0.5) * 8;
-      ty = ((e.clientY - r.top) / r.height - 0.5) * 6;
+      tx = ((e.clientX - r.left) / r.width - 0.5) * 6;
+      ty = ((e.clientY - r.top) / r.height - 0.5) * 4;
     };
     const tick = () => {
       cx += (tx - cx) * 0.06;
@@ -30,80 +31,104 @@ export function WineSwirl() {
 
   return (
     <div
+      ref={ref}
       aria-hidden
-      className="pointer-events-none absolute inset-0 overflow-hidden flex items-center justify-center"
+      className="pointer-events-none absolute inset-x-0 top-[8%] flex justify-center"
+      style={{ transform: "translate(var(--mx,0), var(--my,0))", transition: "transform 0.25s ease-out" }}
     >
-      {/* subtle wine-tinted trail */}
-      <div
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[280px] w-[88%] max-w-[1100px] rounded-full blur-3xl origin-left"
-        style={{
-          background:
-            "linear-gradient(90deg, color-mix(in oklab, var(--wine) 22%, transparent), color-mix(in oklab, var(--rose) 14%, transparent) 55%, transparent)",
-          animation: "ws-trail 3.4s ease-out 1.6s both",
-        }}
-      />
-      <svg
-        ref={ref}
-        viewBox="0 0 1200 600"
-        className="absolute inset-0 w-full h-full"
-        style={{
-          transform: "translate(var(--mx,0), var(--my,0))",
-          transition: "transform 0.2s ease-out",
-        }}
-      >
-        <defs>
-          <linearGradient id="ws-stroke" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0%" stopColor="var(--wine)" stopOpacity="0.9" />
-            <stop offset="55%" stopColor="var(--rose)" stopOpacity="0.85" />
-            <stop offset="100%" stopColor="var(--wine)" stopOpacity="0.5" />
-          </linearGradient>
-          <filter id="ws-soft">
-            <feGaussianBlur stdDeviation="0.4" />
-          </filter>
-        </defs>
+      <div className="relative">
+        {/* Wine glass — origin of motion */}
+        <img
+          src={glass}
+          alt=""
+          className="relative z-10 h-[260px] w-auto md:h-[340px] select-none"
+          style={{ animation: "ws-fade-up 1s ease-out both" }}
+        />
 
-        {/* main swirl: emerges from glass (left of center) and expands across */}
-        <g
-          style={{
-            transformOrigin: "600px 300px",
-            animation: "ws-breathe 9s ease-in-out 5.5s infinite",
-          }}
+        {/* SVG swirl emerging FROM the glass opening, expanding outward */}
+        <svg
+          viewBox="0 0 1400 700"
+          className="pointer-events-none absolute left-1/2 top-[18%] h-[420px] w-[1400px] -translate-x-1/2 md:h-[520px]"
+          style={{ overflow: "visible" }}
         >
-          <path
-            d="M 320 300
-               C 320 230, 420 220, 460 280
-               C 500 340, 420 380, 380 340
-               C 350 310, 380 270, 430 290
-               C 520 320, 620 260, 720 300
-               C 830 345, 940 280, 1020 310
-               C 1080 332, 1110 305, 1120 295"
-            fill="none"
-            stroke="url(#ws-stroke)"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            filter="url(#ws-soft)"
+          <defs>
+            <linearGradient id="ws-stroke" x1="0" x2="1" y1="0.5" y2="0.5">
+              <stop offset="0%" stopColor="var(--wine)" stopOpacity="0.95" />
+              <stop offset="50%" stopColor="var(--rose)" stopOpacity="0.8" />
+              <stop offset="100%" stopColor="var(--wine)" stopOpacity="0.25" />
+            </linearGradient>
+          </defs>
+
+          {/* Main swirl: starts inside the glass (center top), spirals up and out across hero */}
+          <g
             style={{
-              strokeDasharray: 1800,
-              strokeDashoffset: 1800,
-              animation: "ws-draw 3.4s cubic-bezier(0.65,0,0.35,1) 0.8s forwards",
+              transformOrigin: "700px 200px",
+              animation: "ws-breathe 9s ease-in-out 5.5s infinite",
             }}
-          />
-          {/* secondary refining arc */}
-          <path
-            d="M 360 320 C 460 360, 620 320, 780 340 C 920 357, 1040 330, 1100 320"
-            fill="none"
-            stroke="url(#ws-stroke)"
-            strokeWidth="0.9"
-            strokeLinecap="round"
-            opacity="0.55"
-            style={{
-              strokeDasharray: 1200,
-              strokeDashoffset: 1200,
-              animation: "ws-draw 3s cubic-bezier(0.65,0,0.35,1) 1.4s forwards",
-            }}
-          />
-        </g>
-      </svg>
+          >
+            <path
+              d="M 700 210
+                 C 670 180, 730 150, 740 190
+                 C 748 222, 690 232, 678 200
+                 C 668 170, 720 150, 760 175
+                 C 820 210, 760 270, 700 250
+                 C 620 224, 560 280, 500 260
+                 C 420 234, 340 280, 260 250
+                 C 180 222, 120 250, 90 240"
+              fill="none"
+              stroke="url(#ws-stroke)"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              style={{
+                strokeDasharray: 1800,
+                strokeDashoffset: 1800,
+                animation: "ws-draw 3.2s cubic-bezier(0.65,0,0.35,1) 0.8s forwards",
+              }}
+            />
+            <path
+              d="M 700 210
+                 C 760 230, 820 200, 900 230
+                 C 1000 268, 1100 230, 1200 252
+                 C 1280 268, 1320 245, 1340 240"
+              fill="none"
+              stroke="url(#ws-stroke)"
+              strokeWidth="1.4"
+              strokeLinecap="round"
+              style={{
+                strokeDasharray: 1200,
+                strokeDashoffset: 1200,
+                animation: "ws-draw 2.8s cubic-bezier(0.65,0,0.35,1) 1.2s forwards",
+                transform: "scaleX(-1)",
+                transformOrigin: "700px 0",
+              }}
+            />
+            {/* refining secondary arc */}
+            <path
+              d="M 120 290 C 320 320, 560 290, 700 305 C 860 320, 1080 295, 1300 305"
+              fill="none"
+              stroke="url(#ws-stroke)"
+              strokeWidth="0.9"
+              strokeLinecap="round"
+              opacity="0.5"
+              style={{
+                strokeDasharray: 1400,
+                strokeDashoffset: 1400,
+                animation: "ws-draw 3s cubic-bezier(0.65,0,0.35,1) 1.8s forwards",
+              }}
+            />
+          </g>
+        </svg>
+
+        {/* soft wine-tinted trail behind the swirl */}
+        <div
+          className="absolute left-1/2 top-[55%] h-[180px] w-[1100px] -translate-x-1/2 rounded-full blur-3xl"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, color-mix(in oklab, var(--wine) 18%, transparent), color-mix(in oklab, var(--rose) 8%, transparent) 50%, transparent 75%)",
+            animation: "ws-trail 3.4s ease-out 1.6s both",
+          }}
+        />
+      </div>
     </div>
   );
 }

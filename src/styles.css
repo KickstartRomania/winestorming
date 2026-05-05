@@ -154,5 +154,51 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-body);
+    background-image:
+      radial-gradient(ellipse at top, color-mix(in oklab, var(--wine) 6%, transparent), transparent 60%),
+      radial-gradient(ellipse at bottom, color-mix(in oklab, var(--rose) 4%, transparent), transparent 70%);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 }
+
+@theme inline {
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --color-wine: var(--wine);
+  --color-rose: var(--rose);
+  --color-deep-wine: var(--deep-wine);
+  --color-warm-sand: var(--warm-sand);
+  --color-cream: var(--cream);
+  --color-charcoal: var(--charcoal);
+}
+
+@keyframes ws-draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes ws-clarify {
+  0% { opacity: 0.35; filter: blur(4px); letter-spacing: 0.01em; }
+  100% { opacity: 1; filter: blur(0); letter-spacing: -0.02em; }
+}
+@keyframes ws-clarify-sub {
+  0% { opacity: 0.3; filter: blur(3px); }
+  100% { opacity: 1; filter: blur(0); }
+}
+@keyframes ws-fade-up {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes ws-breathe {
+  0%, 100% { opacity: 0.85; transform: rotate(0deg) scale(1); }
+  50% { opacity: 1; transform: rotate(1.2deg) scale(1.012); }
+}
+@keyframes ws-trail {
+  0% { opacity: 0; transform: scaleX(0); }
+  60% { opacity: 0.5; transform: scaleX(1); }
+  100% { opacity: 0.25; transform: scaleX(1); }
+}
+

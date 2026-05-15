@@ -203,16 +203,31 @@
 }
 
 /* === Pour & Settle === */
+@keyframes wp-bottle {
+  0%   { transform: rotate(-15deg) translateY(-20px); opacity: 0; }
+  12%  { opacity: 1; }
+  22%  { transform: rotate(-55deg) translateY(0); opacity: 1; }
+  78%  { transform: rotate(-55deg) translateY(0); opacity: 1; }
+  92%  { transform: rotate(-15deg) translateY(-10px); opacity: 0.7; }
+  100% { transform: rotate(-10deg) translateY(-30px); opacity: 0; }
+}
+.wp-bottle {
+  transform-box: view-box;
+  transform-origin: 210px 80px;
+  animation: wp-bottle 4.2s cubic-bezier(0.4, 0, 0.3, 1) 0s both;
+}
+
 @keyframes wp-stream-fall {
-  0%   { transform: translateY(-220px) scaleY(0.2); opacity: 0; }
-  15%  { opacity: 1; transform: translateY(-120px) scaleY(0.9); }
-  60%  { opacity: 1; transform: translateY(0) scaleY(1); }
-  85%  { opacity: 1; transform: translateY(0) scaleY(1); }
-  100% { opacity: 0; transform: translateY(40px) scaleY(0.4); }
+  0%, 18% { opacity: 0; transform: scaleY(0); }
+  26%     { opacity: 1; transform: scaleY(1); }
+  78%     { opacity: 1; transform: scaleY(1); }
+  88%     { opacity: 0; transform: scaleY(0.2); }
+  100%    { opacity: 0; transform: scaleY(0); }
 }
 .wp-stream {
-  transform-origin: 210px 0;
-  animation: wp-stream-fall 2.6s cubic-bezier(0.55, 0.05, 0.3, 1) 0.4s both;
+  transform-box: view-box;
+  transform-origin: 210px 80px;
+  animation: wp-stream-fall 3.4s cubic-bezier(0.4, 0, 0.3, 1) 0.6s both;
 }
 
 @keyframes wp-fill-rise {
@@ -221,7 +236,7 @@
 }
 .wp-fill {
   transform-origin: center bottom;
-  animation: wp-fill-rise 2.2s cubic-bezier(0.5, 0.1, 0.25, 1) 0.7s both;
+  animation: wp-fill-rise 2.2s cubic-bezier(0.5, 0.1, 0.25, 1) 1.5s both;
 }
 
 @keyframes wp-ripple {
@@ -233,7 +248,7 @@
   100%     { cy: 220; opacity: 0.55; ry: 2; }
 }
 .wp-ripple {
-  animation: wp-ripple 2.4s cubic-bezier(0.4, 0, 0.2, 1) 0.7s both;
+  animation: wp-ripple 2.4s cubic-bezier(0.4, 0, 0.2, 1) 1.5s both;
 }
 
 @keyframes wp-shine {
@@ -242,7 +257,7 @@
   100%    { cy: 220; opacity: 0.4; }
 }
 .wp-shine {
-  animation: wp-shine 2.4s ease-out 0.7s both;
+  animation: wp-shine 2.4s ease-out 1.5s both;
 }
 
 @keyframes wp-splash {
@@ -252,7 +267,7 @@
   100%    { r: 14; opacity: 0; }
 }
 .wp-splash {
-  animation: wp-splash 1s ease-out 0.85s both;
+  animation: wp-splash 1s ease-out 1.5s both;
 }
 
 @keyframes wp-glass-settle {

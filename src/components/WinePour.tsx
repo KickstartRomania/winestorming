@@ -34,9 +34,9 @@ export function WinePour() {
 
           {/* Glass highlight */}
           <linearGradient id="glassEdge" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="var(--charcoal)" stopOpacity="0.18" />
-            <stop offset="50%" stopColor="var(--charcoal)" stopOpacity="0.05" />
-            <stop offset="100%" stopColor="var(--charcoal)" stopOpacity="0.18" />
+            <stop offset="0%" stopColor="var(--charcoal)" stopOpacity="0.55" />
+            <stop offset="50%" stopColor="var(--charcoal)" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="var(--charcoal)" stopOpacity="0.55" />
           </linearGradient>
         </defs>
 
@@ -58,7 +58,8 @@ export function WinePour() {
           <path
             d="M120 180 C120 280, 160 340, 210 340 C260 340, 300 280, 300 180"
             stroke="url(#glassEdge)"
-            strokeWidth="1.25"
+            strokeWidth="2.25"
+            strokeLinecap="round"
             fill="none"
           />
           {/* Rim ellipse */}
@@ -68,7 +69,7 @@ export function WinePour() {
             rx="90"
             ry="8"
             stroke="url(#glassEdge)"
-            strokeWidth="1.25"
+            strokeWidth="2.25"
             fill="none"
           />
           {/* Stem */}
@@ -78,8 +79,8 @@ export function WinePour() {
             x2="210"
             y2="470"
             stroke="var(--charcoal)"
-            strokeOpacity="0.18"
-            strokeWidth="1.25"
+            strokeOpacity="0.45"
+            strokeWidth="2"
           />
           {/* Foot */}
           <ellipse
@@ -88,8 +89,8 @@ export function WinePour() {
             rx="55"
             ry="6"
             stroke="var(--charcoal)"
-            strokeOpacity="0.18"
-            strokeWidth="1.25"
+            strokeOpacity="0.45"
+            strokeWidth="2"
             fill="none"
           />
           {/* Subtle inner highlight */}

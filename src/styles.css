@@ -236,7 +236,7 @@
 }
 .wp-fill {
   transform-origin: center bottom;
-  animation: wp-fill-rise 2.2s cubic-bezier(0.5, 0.1, 0.25, 1) 0.7s both;
+  animation: wp-fill-rise 2.2s cubic-bezier(0.5, 0.1, 0.25, 1) 1.5s both;
 }
 
 @keyframes wp-ripple {
@@ -248,7 +248,7 @@
   100%     { cy: 220; opacity: 0.55; ry: 2; }
 }
 .wp-ripple {
-  animation: wp-ripple 2.4s cubic-bezier(0.4, 0, 0.2, 1) 0.7s both;
+  animation: wp-ripple 2.4s cubic-bezier(0.4, 0, 0.2, 1) 1.5s both;
 }
 
 @keyframes wp-shine {
@@ -257,7 +257,7 @@
   100%    { cy: 220; opacity: 0.4; }
 }
 .wp-shine {
-  animation: wp-shine 2.4s ease-out 0.7s both;
+  animation: wp-shine 2.4s ease-out 1.5s both;
 }
 
 @keyframes wp-splash {
@@ -267,7 +267,7 @@
   100%    { r: 14; opacity: 0; }
 }
 .wp-splash {
-  animation: wp-splash 1s ease-out 0.85s both;
+  animation: wp-splash 1s ease-out 1.5s both;
 }
 
 @keyframes wp-glass-settle {

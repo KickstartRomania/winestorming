@@ -26,7 +26,7 @@ function Index() {
         <WinePour />
 
         <h1
-          className="relative z-10 max-w-4xl font-display text-5xl font-semibold leading-[1.05] text-deep-wine md:text-7xl"
+          className="relative z-10 font-display text-4xl font-semibold leading-[1.05] text-deep-wine sm:text-5xl md:text-6xl lg:text-7xl whitespace-nowrap"
           style={{ animation: "ws-clarify 1.6s cubic-bezier(0.2,0.7,0.2,1) 2.6s both" }}
         >
           Where ideas get{" "}

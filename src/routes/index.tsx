@@ -27,7 +27,7 @@ function Index() {
 
         <h1
           className="relative z-10 font-display text-4xl font-semibold leading-[1.05] text-deep-wine sm:text-5xl md:text-6xl lg:text-7xl whitespace-nowrap"
-          style={{ animation: "ws-clarify 1.6s cubic-bezier(0.2,0.7,0.2,1) 2.6s both" }}
+          style={{ animation: "ws-clarify 1.6s cubic-bezier(0.2,0.7,0.2,1) 3.6s both" }}
         >
           Where ideas get{" "}
           <em className="font-display italic text-wine">refined.</em>
@@ -35,7 +35,7 @@ function Index() {
 
         <p
           className="relative z-10 mt-7 max-w-xl text-base leading-relaxed text-charcoal/70 md:text-lg"
-          style={{ animation: "ws-clarify-sub 1.4s ease-out 3.2s both" }}
+          style={{ animation: "ws-clarify-sub 1.4s ease-out 4.2s both" }}
         >
           A curated idea discussion where great minds refine, challenge, and
           elevate ideas — over a glass of wine.
@@ -43,7 +43,7 @@ function Index() {
 
         <div
           className="relative z-10 mt-10"
-          style={{ animation: "ws-fade-up 1s ease-out 3.8s both" }}
+          style={{ animation: "ws-fade-up 1s ease-out 4.8s both" }}
         >
           <a
             href="#join"
@@ -56,7 +56,7 @@ function Index() {
 
         <div
           className="relative z-10 mt-16 flex items-center gap-8 text-[11px] uppercase tracking-[0.32em] text-charcoal/45"
-          style={{ animation: "ws-fade-up 1s ease-out 4.2s both" }}
+          style={{ animation: "ws-fade-up 1s ease-out 5.2s both" }}
         >
           <span>Curated</span>
           <span className="h-px w-6 bg-charcoal/20" />

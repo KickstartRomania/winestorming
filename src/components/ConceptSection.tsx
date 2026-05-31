@@ -45,7 +45,7 @@ export function ConceptSection() {
 
         {/* Comparison card */}
         <div
-          className="rounded-3xl border border-wine/10 bg-cream/70 p-8 shadow-[0_24px_60px_-30px_color-mix(in_oklab,var(--wine)_35%,transparent)] backdrop-blur-sm md:p-14"
+          className="mt-16 rounded-3xl border border-wine/10 bg-cream/70 p-8 shadow-[0_24px_60px_-30px_color-mix(in_oklab,var(--wine)_35%,transparent)] backdrop-blur-sm md:mt-20 md:p-14"
           style={revealStyle(inView, 0.42)}
         >
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2">

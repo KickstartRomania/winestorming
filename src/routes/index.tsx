@@ -81,6 +81,7 @@ function Index() {
       <ChooseYourSeatSection />
       <ExperienceSection />
       <OutcomesSection />
+      <FaqSection />
     </main>
   );
 }

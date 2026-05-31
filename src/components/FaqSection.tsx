@@ -42,7 +42,7 @@ export function FaqSection() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="relative w-full px-6 py-28 md:py-40">
+    <section className="relative w-full px-6 py-16 md:py-24">
       <div ref={ref} className="mx-auto max-w-4xl">
         {/* Eyebrow + headline */}
         <div className="mx-auto max-w-3xl text-center">

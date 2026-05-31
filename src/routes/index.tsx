@@ -5,6 +5,7 @@ import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { WhyItWorksSection } from "@/components/WhyItWorksSection";
 import { ChooseYourSeatSection } from "@/components/ChooseYourSeatSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
+import { OutcomesSection } from "@/components/OutcomesSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({

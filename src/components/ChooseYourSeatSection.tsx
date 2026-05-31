@@ -108,18 +108,6 @@ export function ChooseYourSeatSection() {
             </div>
           ))}
         </div>
-
-        {/* Closing statement */}
-        <p
-          className="mx-auto mt-24 max-w-2xl text-center font-display text-2xl leading-snug text-deep-wine md:mt-32 md:text-4xl"
-          style={revealStyle(inView, 0.36 + seats.length * 0.16 + 0.12)}
-        >
-          The best ideas rarely emerge alone.
-          <br />
-          <span className="italic text-wine">
-            They emerge through conversation.
-          </span>
-        </p>
       </div>
     </section>
   );

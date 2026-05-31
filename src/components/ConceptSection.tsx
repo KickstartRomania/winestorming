@@ -91,18 +91,6 @@ export function ConceptSection() {
             </div>
           </div>
         </div>
-
-        {/* Closing takeaway */}
-        <p
-          className="mx-auto mt-20 max-w-2xl text-center font-display text-2xl leading-snug text-deep-wine md:text-4xl"
-          style={revealStyle(inView, 0.54)}
-        >
-          Most startup events showcase answers.
-          <br />
-          <span className="italic text-wine">
-            Winestorming explores the questions.
-          </span>
-        </p>
       </div>
     </section>
   );

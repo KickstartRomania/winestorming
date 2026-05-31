@@ -4,6 +4,7 @@ import { ConceptSection } from "@/components/ConceptSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { WhyItWorksSection } from "@/components/WhyItWorksSection";
 import { ChooseYourSeatSection } from "@/components/ChooseYourSeatSection";
+import { ExperienceSection } from "@/components/ExperienceSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -76,6 +77,7 @@ function Index() {
       <HowItWorksSection />
       <WhyItWorksSection />
       <ChooseYourSeatSection />
+      <ExperienceSection />
     </main>
   );
 }

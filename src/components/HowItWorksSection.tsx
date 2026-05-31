@@ -13,12 +13,12 @@ const steps = [
   {
     number: "01",
     title: "startup introductions",
-    body: "Selected founders briefly introduce their startup and share the specific challenge they want help refining.",
+    body: "Selected founders briefly introduce their startup and share the specific challenge they are currently hoping to refine together with the room.",
   },
   {
     number: "02",
     title: "the challenge",
-    body: "Founders present 1–3 questions, decisions, or problems they are currently working through — positioning, pricing, product direction, growth, partnerships.",
+    body: "Founders present 1–3 questions, decisions, or problems they are working through — positioning, pricing, product direction, growth, partnerships.",
   },
   {
     number: "03",
@@ -28,7 +28,7 @@ const steps = [
   {
     number: "04",
     title: "clarity & next steps",
-    body: "Founders leave with fresh perspectives, stronger direction, and ideas worth testing.",
+    body: "Founders leave with fresh perspectives, a stronger sense of direction, and concrete, actionable ideas that are genuinely worth testing next.",
   },
 ];
 
@@ -95,13 +95,13 @@ export function HowItWorksSection() {
             {steps.map((step, i) => (
               <div
                 key={step.number}
-                className="relative pl-20 md:pl-0"
+                className="relative flex pl-20 md:pl-0"
                 style={revealStyle(inView, 0.4 + i * 0.15)}
               >
                 {/* Node dot */}
                 <span className="absolute left-[30px] top-[26px] h-3 w-3 -translate-x-1/2 rounded-full border border-wine/40 bg-cream md:left-9 md:top-[26px]" />
 
-                <div className="group rounded-3xl border border-wine/10 bg-cream/70 p-7 shadow-[0_18px_48px_-30px_color-mix(in_oklab,var(--wine)_35%,transparent)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-wine/30 hover:shadow-[0_26px_60px_-26px_color-mix(in_oklab,var(--wine)_50%,transparent)]">
+                <div className="group flex h-full w-full flex-col rounded-3xl border border-wine/10 bg-cream/70 p-7 shadow-[0_18px_48px_-30px_color-mix(in_oklab,var(--wine)_35%,transparent)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-wine/30 hover:shadow-[0_26px_60px_-26px_color-mix(in_oklab,var(--wine)_50%,transparent)]">
                   <span className="font-display text-4xl font-semibold text-wine/30 transition-colors duration-300 group-hover:text-wine/60 md:text-5xl">
                     {step.number}
                   </span>

@@ -25,11 +25,11 @@ export function ConceptSection() {
         <div className="mt-10 grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2 md:items-start">
           {/* Left column — headline */}
           <h2
-            className="font-display text-4xl font-semibold leading-[1.1] text-deep-wine md:text-5xl lg:text-6xl"
+            className="font-display text-4xl font-semibold leading-[1.1] text-deep-wine md:text-6xl"
             style={revealStyle(inView, 0.12)}
           >
-            <span className="block">not a pitch night.</span>
-            <span className="block">
+            <span className="block whitespace-nowrap">not a pitch night.</span>
+            <span className="block whitespace-nowrap">
               a <span className="italic text-wine">refinement room.</span>
             </span>
           </h2>

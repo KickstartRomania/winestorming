@@ -64,38 +64,7 @@ export function WhyItWorksSection() {
           </p>
         </div>
 
-        {/* Signature swirl */}
-        <div
-          className="pointer-events-none relative mx-auto mt-16 flex h-40 max-w-2xl items-center justify-center md:mt-20 md:h-56"
-          aria-hidden
-          style={{
-            opacity: inView ? 1 : 0,
-            transition: "opacity 1.6s ease-out 0.3s",
-          }}
-        >
-          <svg
-            viewBox="0 0 600 300"
-            className="h-full w-full"
-            fill="none"
-            style={{ animation: inView ? "ws-spin-slow 90s linear infinite" : undefined }}
-          >
-            <g
-              stroke="var(--wine)"
-              strokeWidth="1.2"
-              opacity="0.18"
-              fill="none"
-            >
-              <path d="M300 150 m -120 0 a 120 60 0 1 0 240 0 a 120 60 0 1 0 -240 0" />
-              <path d="M300 150 m -120 0 a 120 60 0 1 0 240 0 a 120 60 0 1 0 -240 0" transform="rotate(45 300 150)" />
-              <path d="M300 150 m -120 0 a 120 60 0 1 0 240 0 a 120 60 0 1 0 -240 0" transform="rotate(90 300 150)" />
-              <path d="M300 150 m -120 0 a 120 60 0 1 0 240 0 a 120 60 0 1 0 -240 0" transform="rotate(135 300 150)" />
-              <circle cx="300" cy="150" r="40" />
-              <circle cx="300" cy="150" r="80" />
-            </g>
-          </svg>
-        </div>
 
-        {/* Main grid */}
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:mt-16">
           {cards.map((card, i) => (
             <div

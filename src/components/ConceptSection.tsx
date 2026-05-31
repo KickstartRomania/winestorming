@@ -1,5 +1,4 @@
 import { useInView } from "@/hooks/use-in-view";
-import { SwirlMark } from "@/components/SwirlMark";
 
 function revealStyle(inView: boolean, delay: number): React.CSSProperties {
   return {

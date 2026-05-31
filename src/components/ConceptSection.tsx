@@ -38,9 +38,8 @@ export function ConceptSection() {
             className="max-w-md text-base leading-relaxed text-charcoal/70 md:pb-2 md:text-lg"
             style={revealStyle(inView, 0.24)}
           >
-            Winestorming is a collaborative startup discussion format where
-            founders openly share real challenges and participants help refine
-            ideas, decisions, and next steps through conversation.
+            Winestorming is where founders bring real startup challenges, and the
+            room helps sharpen the next move.
           </p>
         </div>
 

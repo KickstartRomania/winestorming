@@ -79,6 +79,7 @@ function Index() {
       <WhyItWorksSection />
       <ChooseYourSeatSection />
       <ExperienceSection />
+      <OutcomesSection />
     </main>
   );
 }

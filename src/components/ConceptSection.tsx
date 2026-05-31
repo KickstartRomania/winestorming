@@ -44,15 +44,6 @@ export function ConceptSection() {
           </div>
         </div>
 
-        {/* Decorative swirl — continuation of the hero language */}
-        <div
-          aria-hidden
-          className="pointer-events-none relative my-16 flex justify-center"
-          style={revealStyle(inView, 0.3)}
-        >
-          <SwirlMark className="h-48 w-48 opacity-[0.18] md:h-64 md:w-64" />
-        </div>
-
         {/* Comparison card */}
         <div
           className="rounded-3xl border border-wine/10 bg-cream/70 p-8 shadow-[0_24px_60px_-30px_color-mix(in_oklab,var(--wine)_35%,transparent)] backdrop-blur-sm md:p-14"

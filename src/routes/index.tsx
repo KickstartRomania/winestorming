@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { WineSwirl } from "@/components/WineSwirl";
 import { ConceptSection } from "@/components/ConceptSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { WhyItWorksSection } from "@/components/WhyItWorksSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { WineSwirl } from "@/components/WineSwirl";
+import { ConceptSection } from "@/components/ConceptSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -61,6 +62,8 @@ function Index() {
         </div>
 
       </section>
+
+      <ConceptSection />
     </main>
   );
 }

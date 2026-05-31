@@ -21,21 +21,24 @@ export function ConceptSection() {
 
   return (
     <section className="relative w-full px-6 py-16 md:py-24">
-      <div ref={ref} className="mx-auto max-w-6xl">
-        {/* Headline + intro — baseline aligned at the bottom */}
-        <div className="grid grid-cols-1 gap-x-16 gap-y-8 md:grid-cols-2 md:items-end">
+      <div
+        ref={ref}
+        className="mx-auto grid max-w-6xl grid-cols-1 gap-x-20 gap-y-12 md:grid-cols-2 md:items-center"
+      >
+        {/* Left — title + description */}
+        <div>
           <h2
-            className="font-display text-4xl font-semibold leading-[1.1] text-deep-wine md:text-6xl"
+            className="font-display text-4xl font-semibold leading-[1.1] text-deep-wine md:text-5xl"
             style={revealStyle(inView, 0.12)}
           >
-            <span className="block whitespace-nowrap">not a pitch night.</span>
-            <span className="block whitespace-nowrap">
+            <span className="block">not a pitch night.</span>
+            <span className="block">
               a <span className="italic text-wine">refinement room.</span>
             </span>
           </h2>
 
           <p
-            className="max-w-md text-base leading-relaxed text-charcoal/70 md:pb-2 md:text-lg"
+            className="mt-6 max-w-md text-base leading-relaxed text-charcoal/70 md:text-lg"
             style={revealStyle(inView, 0.24)}
           >
             Winestorming is where founders bring real startup challenges, and the
@@ -43,18 +46,18 @@ export function ConceptSection() {
           </p>
         </div>
 
-        {/* Contrast — editorial, no card */}
-        <div className="mt-16 grid grid-cols-1 gap-y-12 border-t border-wine/15 pt-12 md:mt-20 md:grid-cols-2 md:gap-x-20 md:pt-16">
+        {/* Right — contrast lists */}
+        <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-10">
           {/* what it isn't */}
           <div style={revealStyle(inView, 0.4)}>
-            <h3 className="font-display text-xl italic text-charcoal/45 md:text-2xl">
+            <h3 className="font-display text-lg italic text-charcoal/45 md:text-xl">
               what it isn’t
             </h3>
-            <ul className="mt-7 space-y-3">
+            <ul className="mt-5 space-y-2.5">
               {isnt.map((item) => (
                 <li
                   key={item}
-                  className="font-display text-2xl leading-snug text-charcoal/40 line-through decoration-charcoal/30 decoration-1 md:text-3xl"
+                  className="font-display text-xl leading-snug text-charcoal/40 line-through decoration-charcoal/30 decoration-1 md:text-2xl"
                 >
                   {item}
                 </li>
@@ -64,17 +67,17 @@ export function ConceptSection() {
 
           {/* what it is */}
           <div
-            className="md:border-l md:border-wine/15 md:pl-20"
+            className="sm:border-l sm:border-wine/15 sm:pl-10"
             style={revealStyle(inView, 0.52)}
           >
-            <h3 className="font-display text-xl italic text-wine md:text-2xl">
+            <h3 className="font-display text-lg italic text-wine md:text-xl">
               what it is
             </h3>
-            <ul className="mt-7 space-y-3">
+            <ul className="mt-5 space-y-2.5">
               {is.map((item) => (
                 <li
                   key={item}
-                  className="font-display text-2xl leading-snug text-deep-wine md:text-3xl"
+                  className="font-display text-xl leading-snug text-deep-wine md:text-2xl"
                 >
                   {item}
                 </li>

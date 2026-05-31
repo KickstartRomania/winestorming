@@ -60,16 +60,6 @@ function Index() {
           </a>
         </div>
 
-        <div
-          className="relative z-10 mt-16 flex items-center gap-8 text-[11px] uppercase tracking-[0.32em] text-charcoal/45"
-          style={{ animation: "ws-fade-up 1s ease-out 4.6s both" }}
-        >
-          <span>Curated</span>
-          <span className="h-px w-6 bg-charcoal/20" />
-          <span>Honest</span>
-          <span className="h-px w-6 bg-charcoal/20" />
-          <span>Refined</span>
-        </div>
       </section>
     </main>
   );

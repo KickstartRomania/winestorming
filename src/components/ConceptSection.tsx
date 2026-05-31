@@ -15,14 +15,7 @@ export function ConceptSection() {
   return (
     <section className="relative w-full px-6 py-16 md:py-24">
       <div ref={ref} className="mx-auto max-w-6xl">
-        <p
-          className="font-body text-xs uppercase tracking-[0.4em] text-wine"
-          style={revealStyle(inView, 0)}
-        >
-          01 / concept
-        </p>
-
-        <div className="mt-10 grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2 md:items-start">
+        <div className="grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2 md:items-start">
           {/* Left column — headline */}
           <h2
             className="font-display text-4xl font-semibold leading-[1.1] text-deep-wine md:text-6xl"

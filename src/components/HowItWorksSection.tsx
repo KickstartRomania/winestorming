@@ -40,15 +40,8 @@ export function HowItWorksSection() {
       <div ref={ref} className="mx-auto max-w-6xl">
         {/* Eyebrow + headline */}
         <div className="mx-auto max-w-2xl text-center">
-          <p
-            className="font-body text-xs uppercase tracking-[0.4em] text-wine"
-            style={revealStyle(inView, 0)}
-          >
-            02 / how it works
-          </p>
-
           <h2
-            className="mt-8 font-display text-4xl font-semibold leading-[1.12] text-deep-wine md:text-6xl"
+            className="font-display text-4xl font-semibold leading-[1.12] text-deep-wine md:text-6xl"
             style={revealStyle(inView, 0.12)}
           >
             <span className="block">real startups.</span>

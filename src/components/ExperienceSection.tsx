@@ -66,15 +66,8 @@ export function ExperienceSection() {
       <div ref={ref} className="relative z-10 mx-auto max-w-6xl">
         {/* Eyebrow + headline */}
         <div className="mx-auto max-w-3xl text-center">
-          <p
-            className="font-body text-xs uppercase tracking-[0.4em] text-wine"
-            style={revealStyle(inView, 0)}
-          >
-            05 / the experience
-          </p>
-
           <h2
-            className="mt-8 font-display text-4xl font-semibold leading-[1.12] text-deep-wine md:text-6xl"
+            className="font-display text-4xl font-semibold leading-[1.12] text-deep-wine md:text-6xl"
             style={revealStyle(inView, 0.12)}
           >
             <span className="block">small room.</span>

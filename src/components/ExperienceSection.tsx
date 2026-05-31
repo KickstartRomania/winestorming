@@ -105,18 +105,6 @@ export function ExperienceSection() {
             </div>
           ))}
         </div>
-
-        {/* Highlight quote */}
-        <p
-          className="mx-auto mt-24 max-w-2xl text-center font-display text-2xl leading-snug text-deep-wine md:mt-32 md:text-4xl"
-          style={revealStyle(inView, 0.4 + cards.length * 0.15 + 0.1)}
-        >
-          The goal isn’t to impress the room.
-          <br />
-          <span className="italic text-wine">
-            The goal is to leave with a clearer perspective.
-          </span>
-        </p>
       </div>
     </section>
   );

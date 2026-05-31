@@ -36,7 +36,7 @@ export function ExperienceSection() {
   const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.15 });
 
   return (
-    <section className="relative w-full overflow-hidden px-6 py-28 md:py-40">
+    <section className="relative w-full overflow-hidden px-6 py-16 md:py-24">
       {/* Atmospheric swirl */}
       <div
         aria-hidden

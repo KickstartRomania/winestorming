@@ -13,7 +13,7 @@ export function ConceptSection() {
   const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.15 });
 
   return (
-    <section className="relative w-full px-6 py-28 md:py-40">
+    <section className="relative w-full px-6 py-16 md:py-24">
       <div ref={ref} className="mx-auto max-w-6xl">
         <p
           className="font-body text-xs uppercase tracking-[0.4em] text-wine"

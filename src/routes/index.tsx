@@ -73,6 +73,7 @@ function Index() {
 
       <ConceptSection />
       <HowItWorksSection />
+      <WhyItWorksSection />
     </main>
   );
 }

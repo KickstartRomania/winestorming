@@ -114,16 +114,6 @@ export function OutcomesSection() {
             })}
           </div>
         </div>
-
-        {/* Highlight statement */}
-        <p
-          className="mx-auto mt-24 max-w-2xl text-center font-display text-2xl leading-snug text-deep-wine md:mt-32 md:text-4xl"
-          style={revealStyle(inView, 0.4 + outcomes.length * 0.18 + 0.15)}
-        >
-          Clarity is rarely created alone.
-          <br />
-          <span className="italic text-wine">It’s created through conversation.</span>
-        </p>
       </div>
     </section>
   );

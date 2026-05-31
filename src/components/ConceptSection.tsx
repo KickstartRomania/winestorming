@@ -28,9 +28,10 @@ export function ConceptSection() {
             className="font-display text-4xl font-semibold leading-[1.1] text-deep-wine md:text-6xl"
             style={revealStyle(inView, 0.12)}
           >
-            not a pitch night.
-            <br />
-            a <span className="italic text-wine">refinement room.</span>
+            <span className="block whitespace-nowrap">not a pitch night.</span>
+            <span className="block whitespace-nowrap">
+              a <span className="italic text-wine">refinement room.</span>
+            </span>
           </h2>
 
           {/* Right column — body */}

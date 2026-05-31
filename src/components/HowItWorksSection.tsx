@@ -119,10 +119,12 @@ export function HowItWorksSection() {
 
         {/* Supporting statement */}
         <p
-          className="mx-auto mt-24 max-w-2xl text-center font-display text-2xl leading-snug text-deep-wine md:mt-32 md:text-4xl"
+          className="mx-auto mt-24 max-w-none text-center font-display text-2xl leading-snug text-deep-wine md:mt-32 md:text-4xl"
           style={revealStyle(inView, 0.4 + steps.length * 0.15 + 0.1)}
         >
-          Nobody comes to Winestorming with the answers.
+          <span className="md:whitespace-nowrap">
+            Nobody comes to Winestorming with the answers.
+          </span>
           <br />
           <span className="italic text-wine">That’s the point.</span>
         </p>

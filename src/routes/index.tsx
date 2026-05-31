@@ -62,6 +62,8 @@ function Index() {
         </div>
 
       </section>
+
+      <ConceptSection />
     </main>
   );
 }

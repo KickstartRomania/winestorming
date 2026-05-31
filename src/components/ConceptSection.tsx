@@ -9,14 +9,21 @@ function revealStyle(inView: boolean, delay: number): React.CSSProperties {
   };
 }
 
+const isnt = ["startup competition", "investor pitch event", "networking mixer"];
+const is = [
+  "collaborative discussion",
+  "founder thinking in public",
+  "collective refinement",
+];
+
 export function ConceptSection() {
   const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.15 });
 
   return (
     <section className="relative w-full px-6 py-16 md:py-24">
       <div ref={ref} className="mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2 md:items-start">
-          {/* Left column — headline */}
+        {/* Headline + intro — baseline aligned at the bottom */}
+        <div className="grid grid-cols-1 gap-x-16 gap-y-8 md:grid-cols-2 md:items-end">
           <h2
             className="font-display text-4xl font-semibold leading-[1.1] text-deep-wine md:text-6xl"
             style={revealStyle(inView, 0.12)}
@@ -27,61 +34,53 @@ export function ConceptSection() {
             </span>
           </h2>
 
-          {/* Right column — body */}
-          <div className="md:pt-3" style={revealStyle(inView, 0.24)}>
-            <p className="text-base leading-relaxed text-charcoal/70 md:text-lg pr-[10px] mr-[10px]">
-              Winestorming is a collaborative startup discussion format where
-              founders openly share real challenges and participants help refine
-              ideas, decisions, and next steps through conversation.
-            </p>
-          </div>
+          <p
+            className="max-w-md text-base leading-relaxed text-charcoal/70 md:pb-2 md:text-lg"
+            style={revealStyle(inView, 0.24)}
+          >
+            Winestorming is a collaborative startup discussion format where
+            founders openly share real challenges and participants help refine
+            ideas, decisions, and next steps through conversation.
+          </p>
         </div>
 
-        {/* Comparison card */}
-        <div
-          className="mt-16 rounded-3xl border border-wine/10 bg-cream/70 p-8 shadow-[0_24px_60px_-30px_color-mix(in_oklab,var(--wine)_35%,transparent)] backdrop-blur-sm md:mt-20 md:p-14"
-          style={revealStyle(inView, 0.42)}
-        >
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-            <div>
-              <h3 className="font-display text-xl italic text-charcoal/60 md:text-2xl">
-                what it isn’t
-              </h3>
-              <ul className="mt-6 space-y-4">
-                {["startup competition", "investor pitch event", "networking mixer"].map(
-                  (item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-3 text-base text-charcoal/55 md:text-lg"
-                    >
-                      <span className="h-px w-5 bg-charcoal/30" />
-                      {item}
-                    </li>
-                  ),
-                )}
-              </ul>
-            </div>
+        {/* Contrast — editorial, no card */}
+        <div className="mt-16 grid grid-cols-1 gap-y-12 border-t border-wine/15 pt-12 md:mt-20 md:grid-cols-2 md:gap-x-20 md:pt-16">
+          {/* what it isn't */}
+          <div style={revealStyle(inView, 0.4)}>
+            <h3 className="font-display text-xl italic text-charcoal/45 md:text-2xl">
+              what it isn’t
+            </h3>
+            <ul className="mt-7 space-y-3">
+              {isnt.map((item) => (
+                <li
+                  key={item}
+                  className="font-display text-2xl leading-snug text-charcoal/40 line-through decoration-charcoal/30 decoration-1 md:text-3xl"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            <div className="md:border-l md:border-wine/10 md:pl-10">
-              <h3 className="font-display text-xl italic text-wine md:text-2xl">
-                what it is
-              </h3>
-              <ul className="mt-6 space-y-4">
-                {[
-                  "collaborative discussion",
-                  "founder thinking in public",
-                  "collective refinement",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-3 text-base text-deep-wine md:text-lg"
-                  >
-                    <span className="h-px w-5 bg-wine/50" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* what it is */}
+          <div
+            className="md:border-l md:border-wine/15 md:pl-20"
+            style={revealStyle(inView, 0.52)}
+          >
+            <h3 className="font-display text-xl italic text-wine md:text-2xl">
+              what it is
+            </h3>
+            <ul className="mt-7 space-y-3">
+              {is.map((item) => (
+                <li
+                  key={item}
+                  className="font-display text-2xl leading-snug text-deep-wine md:text-3xl"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

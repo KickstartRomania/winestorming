@@ -13,12 +13,12 @@ const steps = [
   {
     number: "01",
     title: "startup introductions",
-    body: "Selected founders briefly introduce their startup and share the specific challenge they want help refining.",
+    body: "Selected founders briefly introduce their startup and share the specific challenge they are currently hoping to refine together with the room.",
   },
   {
     number: "02",
     title: "the challenge",
-    body: "Founders present 1–3 questions, decisions, or problems they are currently working through — positioning, pricing, product direction, growth, partnerships.",
+    body: "Founders present 1–3 questions, decisions, or problems they are working through — positioning, pricing, product direction, growth, partnerships.",
   },
   {
     number: "03",
@@ -28,7 +28,7 @@ const steps = [
   {
     number: "04",
     title: "clarity & next steps",
-    body: "Founders leave with fresh perspectives, stronger direction, and ideas worth testing.",
+    body: "Founders leave with fresh perspectives, a stronger sense of direction, and concrete, actionable ideas that are genuinely worth testing next.",
   },
 ];
 

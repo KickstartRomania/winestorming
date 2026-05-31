@@ -22,7 +22,7 @@ const options = [
     body: "Bring your startup and 1–3 challenges you’d like the room to help refine.",
     cta: "Apply as a startup",
     href: "#apply",
-    primary: true,
+    primary: false,
   },
   {
     label: "join as a participant",

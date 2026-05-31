@@ -44,20 +44,26 @@ function Index() {
           className="relative z-10 mt-7 max-w-xl text-base leading-relaxed text-charcoal/70 md:text-lg"
           style={{ animation: "ws-clarify-sub 1.4s ease-out 3.6s both" }}
         >
-          A curated idea discussion where great minds refine, challenge, and
-          elevate ideas — over a glass of wine.
+          A collaborative startup discussion night where founders openly share
+          real challenges and participants help shape better solutions.
         </p>
 
         <div
-          className="relative z-10 mt-10"
+          className="relative z-10 mt-10 flex flex-col items-center gap-4 sm:flex-row"
           style={{ animation: "ws-fade-up 1s ease-out 4.2s both" }}
         >
           <a
-            href="#join"
+            href="#apply"
             className="group inline-flex items-center gap-2 rounded-full bg-wine px-8 py-4 font-body text-sm font-medium uppercase tracking-[0.18em] text-cream shadow-[0_10px_30px_-12px_color-mix(in_oklab,var(--wine)_60%,transparent)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-14px_color-mix(in_oklab,var(--wine)_70%,transparent)] hover:bg-deep-wine"
           >
-            Join the next session
+            Apply as a startup
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </a>
+          <a
+            href="#join"
+            className="group inline-flex items-center gap-2 rounded-full border border-wine/30 px-8 py-4 font-body text-sm font-medium uppercase tracking-[0.18em] text-wine transition-all duration-300 hover:-translate-y-0.5 hover:border-wine/60 hover:bg-wine/5"
+          >
+            Join as a participant
           </a>
         </div>
 

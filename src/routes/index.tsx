@@ -71,6 +71,7 @@ function Index() {
       </section>
 
       <ConceptSection />
+      <HowItWorksSection />
     </main>
   );
 }

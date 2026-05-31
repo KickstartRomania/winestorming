@@ -36,15 +36,8 @@ export function ChooseYourSeatSection() {
       <div ref={ref} className="mx-auto max-w-6xl">
         {/* Eyebrow + headline */}
         <div className="mx-auto max-w-3xl text-center">
-          <p
-            className="font-body text-xs uppercase tracking-[0.4em] text-wine"
-            style={revealStyle(inView, 0)}
-          >
-            04 / choose your seat
-          </p>
-
           <h2
-            className="mt-8 font-display text-4xl font-semibold leading-[1.12] text-deep-wine md:text-6xl"
+            className="font-display text-4xl font-semibold leading-[1.12] text-deep-wine md:text-6xl"
             style={revealStyle(inView, 0.12)}
           >
             <span className="block">every great conversation</span>

@@ -3,6 +3,7 @@ import { WineSwirl } from "@/components/WineSwirl";
 import { ConceptSection } from "@/components/ConceptSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { WhyItWorksSection } from "@/components/WhyItWorksSection";
+import { ChooseYourSeatSection } from "@/components/ChooseYourSeatSection";
 
 export const Route = createFileRoute("/")({
   head: () => ({

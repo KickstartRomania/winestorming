@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { WinePour } from "@/components/WinePour";
+import { WineSwirl } from "@/components/WineSwirl";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -9,6 +9,12 @@ export const Route = createFileRoute("/")({
         name: "description",
         content:
           "A curated idea discussion where great minds refine, challenge, and elevate ideas over wine.",
+      },
+      { property: "og:title", content: "Winestorming — Where ideas get refined" },
+      {
+        property: "og:description",
+        content:
+          "Curated conversations that refine ideas. Smart. Honest. Refined.",
       },
     ],
   }),
@@ -22,12 +28,12 @@ function Index() {
         winestorming
       </div>
 
-      <section className="relative mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-end px-6 pb-24 pt-[480px] text-center md:pt-[540px]">
-        <WinePour />
+      <section className="relative mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-end px-6 pb-24 pt-[420px] text-center md:pt-[480px]">
+        <WineSwirl />
 
         <h1
-          className="relative z-10 font-display text-4xl font-semibold leading-[1.05] text-deep-wine sm:text-5xl md:text-6xl lg:text-7xl whitespace-nowrap"
-          style={{ animation: "ws-clarify 1.6s cubic-bezier(0.2,0.7,0.2,1) 3.6s both" }}
+          className="relative z-10 max-w-4xl font-display text-5xl font-semibold leading-[1.05] text-deep-wine md:text-7xl"
+          style={{ animation: "ws-clarify 1.6s cubic-bezier(0.2,0.7,0.2,1) 2.8s both" }}
         >
           Where ideas get{" "}
           <em className="font-display italic text-wine">refined.</em>
@@ -35,7 +41,7 @@ function Index() {
 
         <p
           className="relative z-10 mt-7 max-w-xl text-base leading-relaxed text-charcoal/70 md:text-lg"
-          style={{ animation: "ws-clarify-sub 1.4s ease-out 4.2s both" }}
+          style={{ animation: "ws-clarify-sub 1.4s ease-out 3.6s both" }}
         >
           A curated idea discussion where great minds refine, challenge, and
           elevate ideas — over a glass of wine.
@@ -43,7 +49,7 @@ function Index() {
 
         <div
           className="relative z-10 mt-10"
-          style={{ animation: "ws-fade-up 1s ease-out 4.8s both" }}
+          style={{ animation: "ws-fade-up 1s ease-out 4.2s both" }}
         >
           <a
             href="#join"
@@ -56,7 +62,7 @@ function Index() {
 
         <div
           className="relative z-10 mt-16 flex items-center gap-8 text-[11px] uppercase tracking-[0.32em] text-charcoal/45"
-          style={{ animation: "ws-fade-up 1s ease-out 5.2s both" }}
+          style={{ animation: "ws-fade-up 1s ease-out 4.6s both" }}
         >
           <span>Curated</span>
           <span className="h-px w-6 bg-charcoal/20" />

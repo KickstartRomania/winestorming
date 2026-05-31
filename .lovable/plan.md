@@ -1,29 +1,17 @@
 ## Goal
 
-Make the section-ending statements feel intentional instead of repetitive. Right now all 8 sections end with the same kind of two-line aphorism, and the "questions vs. answers" / "through conversation" motifs recur across both headlines and closings. The fix: keep closings only where they add a distinct beat, and remove the redundant ones.
+Make the Concept section feel composed instead of scattered. Right now the title/description sit on the far left while the two lists float on the far right with a large empty gap between them, and the list type is so large that items wrap unevenly.
 
-## Changes
+## Changes (all in `src/components/ConceptSection.tsx`)
 
-Remove the closing aphorism from these sections (delete the trailing `<p>` block only — headline, supporting text, and cards stay untouched):
+1. **Smaller, tighter list type** — drop "what it isn't" / "what it is" items from `text-xl md:text-2xl` to roughly `text-base md:text-lg`, and the labels from `text-lg md:text-xl` to `text-sm md:text-base`. Smaller type keeps each item on one line so the rows line up cleanly.
 
-- **01 Concept** (`ConceptSection.tsx`) — closing "Most startup events showcase answers / Winestorming explores the questions" is nearly verbatim the headline of section 03, so drop it here.
-- **04 Choose your seat** (`ChooseYourSeatSection.tsx`) — closing "The best ideas rarely emerge alone / through conversation" just restates the headline's "every conversation needs both sides."
-- **07 Outcomes** (`OutcomesSection.tsx`) — closing "Clarity is rarely created alone / through conversation" echoes both the headline and section 04's closing.
-- **08 Next Session** (`NextSessionSection.tsx`) — closing "Some people bring questions / Others help uncover better answers" dilutes the CTA; the conversion section should end on the action, not an aphorism.
+2. **Pull the two lists together** — reduce the gap between "what it isn't" and "what it is" so they read as one paired unit rather than two stranded columns. Keep the thin wine divider between them.
 
-Keep the closing aphorism (distinct, earns the flourish) on:
+3. **Align the columns to a shared top edge** — switch the outer grid from `md:items-center` to `md:items-start` so the headline and the lists start on the same baseline, giving the section a clear top alignment.
 
-- **02 How it works** — "Nobody comes to Winestorming with the answers. / That's the point."
-- **03 Why it works** — "Better conversations create better decisions. / Better decisions create better startups."
-- **05 The experience** — "The goal isn't to impress the room. / The goal is to leave with a clearer perspective."
-- **09 FAQ** — "The best way to understand Winestorming / is to experience it."
-
-## Technical notes
-
-- Each closing is a single `<p>` element near the end of its component, styled with `mx-auto mt-24 max-w-2xl text-center font-display ...` and a `revealStyle(...)` delay. Removing it is a clean deletion of that block.
-- No layout breakage expected: each closing sits after the section's main content grid, so removing it just ends the section earlier. Vertical rhythm stays consistent because section padding (`py-16 md:py-24`) lives on the `<section>`, not the closing line.
-- The `revealStyle` import and any other usages in each file remain in use (headline/supporting text still call it), so no unused-import cleanup is needed.
+4. **Rebalance the grid** — give the left (title + description) column a bit more room and the right (lists) column slightly less, so the lists sit closer to center instead of pinned to the far right edge.
 
 ## Result
 
-Closings drop from 8 to 4, appearing only at meaningful beats, and the duplicated questions/answers + conversation motifs are reduced — the page reads leaner and each remaining closing lands with more weight.
+A balanced two-column block: title + short description on the left, a compact aligned "what it isn't / what it is" pair on the right, with consistent top alignment and no oversized wrapping text.

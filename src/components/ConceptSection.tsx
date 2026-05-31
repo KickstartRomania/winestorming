@@ -23,7 +23,7 @@ export function ConceptSection() {
     <section className="relative w-full px-6 py-16 md:py-24">
       <div
         ref={ref}
-        className="mx-auto grid max-w-6xl grid-cols-1 gap-x-20 gap-y-12 md:grid-cols-2 md:items-center"
+        className="mx-auto grid max-w-6xl grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-[1.15fr_1fr] md:items-start"
       >
         {/* Left — title + description */}
         <div>
@@ -47,17 +47,17 @@ export function ConceptSection() {
         </div>
 
         {/* Right — contrast lists */}
-        <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-10">
+        <div className="grid grid-cols-2 gap-x-8 md:pt-2">
           {/* what it isn't */}
           <div style={revealStyle(inView, 0.4)}>
-            <h3 className="font-display text-lg italic text-charcoal/45 md:text-xl">
+            <h3 className="font-display text-sm italic text-charcoal/45 md:text-base">
               what it isn’t
             </h3>
-            <ul className="mt-5 space-y-2.5">
+            <ul className="mt-4 space-y-2">
               {isnt.map((item) => (
                 <li
                   key={item}
-                  className="font-display text-xl leading-snug text-charcoal/40 line-through decoration-charcoal/30 decoration-1 md:text-2xl"
+                  className="font-display text-base leading-snug text-charcoal/40 line-through decoration-charcoal/30 decoration-1 md:text-lg"
                 >
                   {item}
                 </li>
@@ -67,17 +67,17 @@ export function ConceptSection() {
 
           {/* what it is */}
           <div
-            className="sm:border-l sm:border-wine/15 sm:pl-10"
+            className="border-l border-wine/15 pl-8"
             style={revealStyle(inView, 0.52)}
           >
-            <h3 className="font-display text-lg italic text-wine md:text-xl">
+            <h3 className="font-display text-sm italic text-wine md:text-base">
               what it is
             </h3>
-            <ul className="mt-5 space-y-2.5">
+            <ul className="mt-4 space-y-2">
               {is.map((item) => (
                 <li
                   key={item}
-                  className="font-display text-xl leading-snug text-deep-wine md:text-2xl"
+                  className="font-display text-base leading-snug text-deep-wine md:text-lg"
                 >
                   {item}
                 </li>

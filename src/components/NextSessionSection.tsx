@@ -65,18 +65,23 @@ export function NextSessionSection() {
           </p>
         </div>
 
-        {/* Event details card */}
+        {/* Event details — open editorial layout */}
         <div
-          className="mx-auto mt-16 max-w-4xl rounded-3xl border border-wine/15 bg-cream/70 p-10 shadow-[0_24px_60px_-30px_color-mix(in_oklab,var(--wine)_35%,transparent)] backdrop-blur-sm md:mt-20 md:p-16"
+          className="mx-auto mt-16 max-w-4xl border-y border-wine/15 py-12 md:mt-20 md:py-16"
           style={revealStyle(inView, 0.36)}
         >
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:gap-12">
-            {details.map((detail) => (
-              <div key={detail.label} className="text-center sm:text-left">
+          <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-4 md:gap-y-0">
+            {details.map((detail, i) => (
+              <div
+                key={detail.label}
+                className={`px-4 text-center md:px-8 ${
+                  i > 0 ? "md:border-l md:border-wine/15" : ""
+                }`}
+              >
                 <p className="font-body text-xs uppercase tracking-[0.3em] text-wine">
                   {detail.label}
                 </p>
-                <p className="mt-3 font-display text-2xl text-deep-wine md:text-3xl">
+                <p className="mt-3 font-display text-xl text-deep-wine md:text-2xl">
                   {detail.value}
                 </p>
               </div>
@@ -85,17 +90,29 @@ export function NextSessionSection() {
         </div>
 
         {/* Participation options */}
-        <div className="mt-8 grid grid-cols-1 gap-6 md:mt-10 md:grid-cols-2 md:gap-8">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 md:gap-8">
           {options.map((option, i) => (
             <div
               key={option.label}
-              className="group flex flex-col rounded-3xl border border-wine/15 bg-cream/70 p-8 shadow-[0_18px_48px_-30px_color-mix(in_oklab,var(--wine)_35%,transparent)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-wine/40 hover:shadow-[0_30px_70px_-26px_color-mix(in_oklab,var(--wine)_55%,transparent)] md:p-12"
+              className={
+                option.primary
+                  ? "group flex flex-col rounded-3xl bg-deep-wine p-8 shadow-[0_30px_70px_-26px_color-mix(in_oklab,var(--wine)_70%,transparent)] transition-all duration-300 hover:-translate-y-1.5 md:p-12"
+                  : "group flex flex-col rounded-3xl border border-wine/25 p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-wine/45 hover:bg-wine/[0.03] md:p-12"
+              }
               style={revealStyle(inView, 0.5 + i * 0.16)}
             >
-              <h3 className="font-display text-2xl text-deep-wine md:text-3xl">
+              <h3
+                className={`font-display text-2xl md:text-3xl ${
+                  option.primary ? "text-cream" : "text-deep-wine"
+                }`}
+              >
                 {option.label}
               </h3>
-              <p className="mt-5 text-base leading-relaxed text-charcoal/70 md:text-lg">
+              <p
+                className={`mt-5 text-base leading-relaxed md:text-lg ${
+                  option.primary ? "text-cream/75" : "text-charcoal/70"
+                }`}
+              >
                 {option.body}
               </p>
               <div className="mt-auto pt-10">
@@ -103,7 +120,7 @@ export function NextSessionSection() {
                   href={option.href}
                   className={
                     option.primary
-                      ? "group/cta inline-flex items-center gap-2 rounded-full bg-wine px-8 py-4 font-body text-sm font-medium uppercase tracking-[0.18em] text-cream shadow-[0_10px_30px_-12px_color-mix(in_oklab,var(--wine)_60%,transparent)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-deep-wine hover:shadow-[0_18px_40px_-14px_color-mix(in_oklab,var(--wine)_70%,transparent)]"
+                      ? "group/cta inline-flex items-center gap-2 rounded-full bg-cream px-8 py-4 font-body text-sm font-medium uppercase tracking-[0.18em] text-deep-wine shadow-[0_10px_30px_-12px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream/90"
                       : "group/cta inline-flex items-center gap-2 rounded-full border border-wine/30 px-8 py-4 font-body text-sm font-medium uppercase tracking-[0.18em] text-wine transition-all duration-300 hover:-translate-y-0.5 hover:border-wine/60 hover:bg-wine/5"
                   }
                 >

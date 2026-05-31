@@ -36,7 +36,7 @@ export function ConceptSection() {
 
           {/* Right column — body */}
           <div className="md:pt-3" style={revealStyle(inView, 0.24)}>
-            <p className="max-w-md text-base leading-relaxed text-charcoal/70 md:text-lg">
+            <p className="text-base leading-relaxed text-charcoal/70 md:text-lg">
               Winestorming is a collaborative startup discussion format where
               founders openly share real challenges and participants help refine
               ideas, decisions, and next steps through conversation.

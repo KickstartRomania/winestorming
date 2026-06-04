@@ -61,8 +61,7 @@ function Index() {
             className="group inline-flex items-center gap-2 rounded-full bg-wine px-8 py-4 text-center font-body text-sm font-medium uppercase tracking-[0.18em] text-cream shadow-[0_10px_30px_-12px_color-mix(in_oklab,var(--wine)_60%,transparent)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-14px_color-mix(in_oklab,var(--wine)_70%,transparent)] hover:bg-deep-wine"
           >
             <span className="leading-tight">
-              APPLY AS STARTUP<br />
-              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+              APPLY AS STARTUP
             </span>
           </a>
           <a

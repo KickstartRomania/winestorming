@@ -23,7 +23,8 @@ const seats = [
     body: "Join the room, contribute ideas and perspectives, and participate in real startup conversations.",
     tags: ["feedback", "strategy", "product thinking", "creativity", "founder discussions"],
     cta: "Join as a participant",
-    href: "#join",
+    href: "https://luma.com/cll39l2p",
+    external: true,
     primary: false,
   },
 ];

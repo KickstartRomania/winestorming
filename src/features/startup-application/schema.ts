@@ -81,7 +81,7 @@ export const startupApplicationSchema = z.object({
   additional_notes: z
     .string()
     .trim()
-    .optional()
+    .catch("")
     .transform((value) => value || ""),
 });
 

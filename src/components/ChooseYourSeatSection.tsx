@@ -87,8 +87,8 @@ export function ChooseYourSeatSection() {
               <div className="mt-auto pt-10">
                 <a
                   href={seat.href}
-                  target={seat.href?.startsWith("http") ? "_blank" : undefined}
-                  rel={seat.href?.startsWith("http") ? "noopener noreferrer" : undefined}
+                  data-luma-action={seat.lumaEventId ? "checkout" : undefined}
+                  data-luma-event-id={seat.lumaEventId}
                   className={
                     seat.primary
                       ? "group/cta inline-flex items-center gap-2 rounded-full bg-wine px-8 py-4 font-body text-sm font-medium uppercase tracking-[0.18em] text-cream shadow-[0_10px_30px_-12px_color-mix(in_oklab,var(--wine)_60%,transparent)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-deep-wine hover:shadow-[0_18px_40px_-14px_color-mix(in_oklab,var(--wine)_70%,transparent)]"

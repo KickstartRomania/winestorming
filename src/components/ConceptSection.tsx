@@ -57,7 +57,7 @@ export function ConceptSection() {
               {isnt.map((item) => (
                 <li
                   key={item}
-                  className="font-display text-base leading-snug text-charcoal/40 line-through decoration-charcoal/30 decoration-1 md:text-lg"
+                  className="whitespace-nowrap font-display text-base leading-snug text-charcoal/40 line-through decoration-charcoal/30 decoration-1 md:text-lg"
                 >
                   {item}
                 </li>
@@ -77,7 +77,7 @@ export function ConceptSection() {
               {is.map((item) => (
                 <li
                   key={item}
-                  className="font-display text-base leading-snug text-deep-wine md:text-lg"
+                  className="whitespace-nowrap font-display text-base leading-snug text-deep-wine md:text-lg"
                 >
                   {item}
                 </li>

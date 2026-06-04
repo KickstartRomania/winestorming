@@ -39,7 +39,7 @@ export function WineSwirl() {
       <div className="relative">
         {/* Winestorming logo */}
         <img
-          src={logo.url}
+          src={logo}
           alt="Winestorming"
           className="relative z-10 w-[400px] max-w-[85vw] h-auto select-none md:w-[520px]"
           style={{ animation: "ws-fade-up 1s ease-out both" }}

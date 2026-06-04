@@ -75,6 +75,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js" async />
         <Scripts />
       </body>
     </html>

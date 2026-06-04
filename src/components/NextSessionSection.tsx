@@ -22,14 +22,15 @@ const options = [
     body: "Bring your startup and 1–3 challenges you’d like the room to help refine.",
     cta: "Apply as a startup",
     href: "#apply",
+    lumaEventId: undefined as string | undefined,
     primary: false,
   },
   {
     label: "join as a participant",
     body: "Contribute ideas, perspectives, and feedback while taking part in real startup conversations.",
     cta: "Join as a participant",
-    href: "https://luma.com/cll39l2p",
-    external: true,
+    href: "https://luma.com/event/evt-66JTb6qzo1hSvnc",
+    lumaEventId: "evt-66JTb6qzo1hSvnc",
     primary: false,
   },
 ];
@@ -112,8 +113,8 @@ export function NextSessionSection() {
               <div className="mt-auto pt-10">
                 <a
                   href={option.href}
-                  target={option.href?.startsWith("http") ? "_blank" : undefined}
-                  rel={option.href?.startsWith("http") ? "noopener noreferrer" : undefined}
+                  data-luma-action={option.lumaEventId ? "checkout" : undefined}
+                  data-luma-event-id={option.lumaEventId}
                   className={
                     option.primary
                       ? "group/cta inline-flex items-center gap-2 rounded-full bg-cream px-8 py-4 font-body text-sm font-medium uppercase tracking-[0.18em] text-deep-wine shadow-[0_10px_30px_-12px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream/90"

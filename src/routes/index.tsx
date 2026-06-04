@@ -33,11 +33,11 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <section className="relative mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 py-24 text-center">
+      <section className="relative mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 text-center">
         <WineSwirl />
 
         <h1
-          className="relative z-10 mt-4 max-w-4xl font-display text-5xl font-semibold leading-[1.05] text-deep-wine md:text-7xl"
+          className="relative z-10 mt-2 max-w-4xl font-display text-5xl font-semibold leading-[1.05] text-deep-wine md:text-7xl"
           style={{ animation: "ws-clarify 1.6s cubic-bezier(0.2,0.7,0.2,1) 2.8s both" }}
         >
           Where startups get{" "}
@@ -45,7 +45,7 @@ function Index() {
         </h1>
 
         <p
-          className="relative z-10 mt-6 max-w-xl text-base leading-relaxed text-charcoal/70 md:text-lg"
+          className="relative z-10 mt-3 max-w-xl text-base leading-relaxed text-charcoal/70 md:text-lg"
           style={{ animation: "ws-clarify-sub 1.4s ease-out 3.6s both" }}
         >
           A collaborative startup discussion night where founders openly share
@@ -53,7 +53,7 @@ function Index() {
         </p>
 
         <div
-          className="relative z-10 mt-10 flex flex-col items-center gap-4 sm:flex-row"
+          className="relative z-10 mt-6 flex flex-col items-center gap-4 sm:flex-row"
           style={{ animation: "ws-fade-up 1s ease-out 4.2s both" }}
         >
           <a

@@ -95,10 +95,10 @@ export function OutcomesSection() {
                     <span className="font-display text-sm font-semibold tracking-[0.2em] text-wine/50">
                       {outcome.index}
                     </span>
-                    <h3 className="mt-3 font-display text-3xl leading-tight text-deep-wine md:text-4xl">
+                    <h3 className="mt-2 font-display text-2xl leading-tight text-deep-wine md:text-3xl">
                       {outcome.title}
                     </h3>
-                    <p className="mt-4 text-base leading-relaxed text-charcoal/70 md:text-lg">
+                    <p className="mt-2 text-base leading-relaxed text-charcoal/70 md:text-base">
                       {outcome.body}
                     </p>
                   </div>

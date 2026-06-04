@@ -33,7 +33,7 @@ export function WineSwirl() {
     <div
       ref={ref}
       aria-hidden
-      className="pointer-events-none absolute inset-x-0 top-[8%] flex justify-center"
+      className="pointer-events-none relative z-10 flex justify-center"
       style={{ transform: "translate(var(--mx,0), var(--my,0))", transition: "transform 0.25s ease-out" }}
     >
       <div className="relative">
@@ -41,13 +41,13 @@ export function WineSwirl() {
         <img
           src={logo.url}
           alt="Winestorming"
-          className="relative z-10 w-[440px] max-w-[88vw] h-auto select-none md:w-[600px]"
+          className="relative z-10 w-[320px] max-w-[80vw] h-auto select-none md:w-[400px]"
           style={{ animation: "ws-fade-up 1s ease-out both" }}
         />
 
         {/* soft wine-tinted glow behind the glass */}
         <div
-          className="absolute left-1/2 top-[55%] h-[180px] w-[1100px] -translate-x-1/2 rounded-full blur-3xl"
+          className="absolute left-1/2 top-[55%] h-[160px] w-[900px] max-w-[120vw] -translate-x-1/2 rounded-full blur-3xl"
           style={{
             background:
               "radial-gradient(ellipse at center, color-mix(in oklab, var(--wine) 18%, transparent), color-mix(in oklab, var(--rose) 8%, transparent) 50%, transparent 75%)",

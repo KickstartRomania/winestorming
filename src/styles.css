@@ -179,12 +179,12 @@
   to { stroke-dashoffset: 0; }
 }
 @keyframes ws-clarify {
-  0% { opacity: 0.35; filter: blur(4px); }
-  100% { opacity: 1; filter: blur(0); }
+  0% { opacity: 0.35; }
+  100% { opacity: 1; }
 }
 @keyframes ws-clarify-sub {
-  0% { opacity: 0.3; filter: blur(3px); }
-  100% { opacity: 1; filter: blur(0); }
+  0% { opacity: 0.3; }
+  100% { opacity: 1; }
 }
 @keyframes ws-fade-up {
   0% { opacity: 0; transform: translateY(12px); }

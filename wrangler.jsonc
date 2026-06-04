@@ -1,7 +1,20 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "tanstack-start-app",
+  "name": "winestorming",
   "compatibility_date": "2025-09-24",
   "compatibility_flags": ["nodejs_compat"],
   "main": "@tanstack/react-start/server-entry",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "winestorming",
+      "database_id": "1dda9b1f-3b73-4a03-98ef-6f69a2a2ddae"
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "winestorming.eu",
+      "custom_domain": true
+    }
+  ]
 }

@@ -8,6 +8,10 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
+    "deploy": "npm run build && npx wrangler deploy dist/server/server.js --assets dist/client",
+    "cf-typegen": "wrangler types",
+    "db:migrate:local": "wrangler d1 execute DB --local --file=./db/migrations/0001_startup_applications.sql",
+    "db:migrate:remote": "wrangler d1 execute DB --remote --file=./db/migrations/0001_startup_applications.sql",
     "lint": "eslint .",
     "format": "prettier --write ."
   },

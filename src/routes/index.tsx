@@ -37,7 +37,7 @@ function Index() {
         <WineSwirl />
 
         <h1
-          className="relative z-10 -mt-1 max-w-4xl font-display text-5xl font-semibold leading-[1.05] text-deep-wine md:text-7xl"
+          className="relative z-10 -mt-16 max-w-4xl font-display text-5xl font-semibold leading-[1.05] text-deep-wine md:-mt-24 md:text-7xl"
           style={{ animation: "ws-clarify 1.6s cubic-bezier(0.2,0.7,0.2,1) 2.8s both" }}
         >
           Where startups get{" "}

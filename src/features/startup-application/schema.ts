@@ -22,22 +22,19 @@ const normalizeUrl = (value: unknown) => {
 };
 
 const requiredText = (label: string, minLength = 1) =>
-  z.preprocess(
-    normalizeText,
-    z
-      .string()
-      .min(1, `${label} is required.`)
-      .min(minLength, `${label} must be at least ${minLength} characters.`),
-  );
+  z
+    .string({ required_error: `${label} is required.` })
+    .trim()
+    .min(1, `${label} is required.`)
+    .min(minLength, `${label} must be at least ${minLength} characters.`);
 
 const requiredUrl = (label: string) =>
-  z.preprocess(
-    normalizeUrl,
-    z
-      .string()
-      .min(1, `${label} is required.`)
-      .url(`Enter a valid ${label.toLowerCase()}.`),
-  );
+  z
+    .string({ required_error: `${label} is required.` })
+    .trim()
+    .min(1, `${label} is required.`)
+    .transform(normalizeUrl)
+    .pipe(z.string().url(`Enter a valid ${label.toLowerCase()}.`));
 
 export const startupStages = [
   "Idea",

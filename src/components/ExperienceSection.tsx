@@ -70,13 +70,12 @@ export function ExperienceSection() {
             className="font-display text-4xl font-semibold leading-[1.12] text-deep-wine md:text-6xl"
             style={revealStyle(inView, 0.12)}
           >
-            <span className="block">small room.</span>
-            <span className="block">good wine.</span>
+            <span className="block">small room. good wine.</span>
             <span className="block italic text-wine">better conversations.</span>
           </h2>
 
           <p
-            className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-charcoal/70 md:text-lg"
+            className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-charcoal/70 md:text-lg"
             style={revealStyle(inView, 0.24)}
           >
             Winestorming is intentionally small. Around 30 people, 3–5 startups,

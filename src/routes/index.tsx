@@ -13,13 +13,13 @@ import { StartupApplicationSection } from "@/components/StartupApplicationSectio
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Winestorming — Where ideas get refined" },
+      { title: "Winestorming — Where startups get refined" },
       {
         name: "description",
         content:
           "A curated idea discussion where great minds refine, challenge, and elevate ideas over wine.",
       },
-      { property: "og:title", content: "Winestorming — Where ideas get refined" },
+      { property: "og:title", content: "Winestorming — Where startups get refined" },
       {
         property: "og:description",
         content:
@@ -44,7 +44,7 @@ function Index() {
           className="relative z-10 max-w-4xl font-display text-5xl font-semibold leading-[1.05] text-deep-wine md:text-7xl"
           style={{ animation: "ws-clarify 1.6s cubic-bezier(0.2,0.7,0.2,1) 2.8s both" }}
         >
-          Where ideas get{" "}
+          Where startups get{" "}
           <em className="font-display italic text-wine">refined.</em>
         </h1>
 

@@ -23,7 +23,7 @@ const seats = [
     label: "help shape solutions",
     body: "Join the room, contribute ideas and perspectives, and participate in real startup conversations.",
     tags: ["feedback", "strategy", "product thinking", "creativity", "founder discussions"],
-    cta: "Join as a participant",
+    cta: "JOIN AS PARTICIPANT",
     href: "https://luma.com/event/evt-66JTb6qzo1hSvnc",
     lumaEventId: "evt-66JTb6qzo1hSvnc",
     primary: false,

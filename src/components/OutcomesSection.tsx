@@ -60,7 +60,7 @@ export function OutcomesSection() {
         </div>
 
         {/* Outcomes */}
-        <div className="relative mx-auto mt-20 max-w-4xl md:mt-28">
+        <div className="relative mx-auto mt-14 max-w-4xl md:mt-16">
           {/* Central connecting line */}
           <div className="pointer-events-none absolute bottom-0 left-1/2 top-0 hidden w-px -translate-x-1/2 md:block">
             <div className="h-full w-px bg-wine/10" />
@@ -73,7 +73,7 @@ export function OutcomesSection() {
             />
           </div>
 
-          <div className="flex flex-col gap-10 md:gap-14">
+          <div className="flex flex-col gap-8 md:gap-6">
             {outcomes.map((outcome, i) => {
               const alignRight = i % 2 === 1;
               return (
@@ -95,10 +95,10 @@ export function OutcomesSection() {
                     <span className="font-display text-sm font-semibold tracking-[0.2em] text-wine/50">
                       {outcome.index}
                     </span>
-                    <h3 className="mt-3 font-display text-3xl leading-tight text-deep-wine md:text-4xl">
+                    <h3 className="mt-2 font-display text-2xl leading-tight text-deep-wine md:text-3xl">
                       {outcome.title}
                     </h3>
-                    <p className="mt-4 text-base leading-relaxed text-charcoal/70 md:text-lg">
+                    <p className="mt-2 text-base leading-relaxed text-charcoal/70 md:text-base">
                       {outcome.body}
                     </p>
                   </div>

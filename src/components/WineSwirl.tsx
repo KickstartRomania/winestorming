@@ -42,7 +42,7 @@ export function WineSwirl() {
           src={logo.url}
           alt="Winestorming"
           className="relative z-10 w-[400px] max-w-[85vw] h-auto select-none md:w-[520px]"
-          style={{ animation: "ws-fade-up 0.6s ease-out both" }}
+          style={{ animation: "ws-fade-up 1s ease-out both" }}
         />
 
         {/* soft wine-tinted glow behind the glass */}
@@ -51,7 +51,7 @@ export function WineSwirl() {
           style={{
             background:
               "radial-gradient(ellipse at center, color-mix(in oklab, var(--wine) 18%, transparent), color-mix(in oklab, var(--rose) 8%, transparent) 50%, transparent 75%)",
-            animation: "ws-trail 2s ease-out 0.8s both",
+            animation: "ws-trail 3.4s ease-out 1.6s both",
           }}
         />
       </div>

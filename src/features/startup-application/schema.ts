@@ -1,18 +1,6 @@
 import { z } from "zod";
 
-const normalizeText = (value: unknown) => {
-  if (typeof value !== "string") {
-    return value;
-  }
-
-  return value.trim();
-};
-
-const normalizeUrl = (value: unknown) => {
-  if (typeof value !== "string") {
-    return value;
-  }
-
+const normalizeUrl = (value: string) => {
   const trimmed = value.trim();
   if (!trimmed) {
     return trimmed;
@@ -52,13 +40,11 @@ export const stepFieldNames = [
 export const startupApplicationSchema = z.object({
   first_name: requiredText("First name"),
   last_name: requiredText("Last name"),
-  email: z.preprocess(
-    normalizeText,
-    z
-      .string()
-      .min(1, "Email address is required.")
-      .email("Enter a valid email address."),
-  ),
+  email: z
+    .string({ required_error: "Email address is required." })
+    .trim()
+    .min(1, "Email address is required.")
+    .email("Enter a valid email address."),
   phone_number: requiredText("Phone number", 7),
   linkedin_url: requiredUrl("LinkedIn profile"),
   startup_name: requiredText("Startup name"),
@@ -92,7 +78,11 @@ export const startupApplicationSchema = z.object({
   available_for_event: z.enum(["yes", "no"], {
     required_error: "Please confirm whether you can attend the event.",
   }),
-  additional_notes: z.preprocess(normalizeText, z.string().optional()).transform((value) => value || ""),
+  additional_notes: z
+    .string()
+    .trim()
+    .optional()
+    .transform((value) => value || ""),
 });
 
 export type StartupApplicationFormValues = z.infer<typeof startupApplicationSchema>;

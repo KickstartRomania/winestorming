@@ -64,7 +64,9 @@ function Index() {
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </a>
           <a
-            href="#join"
+            href="https://luma.com/cll39l2p"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 rounded-full border border-wine/30 px-8 py-4 font-body text-sm font-medium uppercase tracking-[0.18em] text-wine transition-all duration-300 hover:-translate-y-0.5 hover:border-wine/60 hover:bg-wine/5"
           >
             Join as a participant

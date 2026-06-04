@@ -77,7 +77,7 @@ export function ConceptSection() {
               {is.map((item) => (
                 <li
                   key={item}
-                  className="font-display text-base leading-snug text-deep-wine md:text-lg"
+                  className="whitespace-nowrap font-display text-base leading-snug text-deep-wine md:text-lg"
                 >
                   {item}
                 </li>

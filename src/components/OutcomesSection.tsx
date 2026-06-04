@@ -73,7 +73,7 @@ export function OutcomesSection() {
             />
           </div>
 
-          <div className="flex flex-col gap-10 md:gap-14">
+          <div className="flex flex-col gap-8 md:gap-6">
             {outcomes.map((outcome, i) => {
               const alignRight = i % 2 === 1;
               return (

@@ -16,6 +16,7 @@ const seats = [
     tags: ["positioning", "pricing", "product", "growth", "partnerships"],
     cta: "Apply as a startup",
     href: "#apply",
+    lumaEventId: undefined as string | undefined,
     primary: true,
   },
   {

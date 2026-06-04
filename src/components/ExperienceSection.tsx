@@ -74,14 +74,6 @@ export function ExperienceSection() {
             <span className="block italic text-wine">better conversations.</span>
           </h2>
 
-          <p
-            className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-charcoal/70 md:text-lg"
-            style={revealStyle(inView, 0.24)}
-          >
-            Winestorming is intentionally small. Around 30 people, 3–5 startups,
-            and an evening built around thoughtful discussion instead of
-            presentations.
-          </p>
         </div>
 
         {/* Experience cards */}

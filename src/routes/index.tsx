@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <section className="relative mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 text-center">
+      <section className="relative mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 pb-32 text-center md:pb-48">
         <WineSwirl />
 
         <h1

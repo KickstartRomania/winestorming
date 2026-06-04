@@ -71,7 +71,7 @@ function Index() {
             data-luma-event-id="evt-66JTb6qzo1hSvnc"
             className="group inline-flex items-center gap-2 rounded-full border border-wine/30 px-8 py-4 font-body text-sm font-medium uppercase tracking-[0.18em] text-wine transition-all duration-300 hover:-translate-y-0.5 hover:border-wine/60 hover:bg-wine/5"
           >
-            Join as a participant
+            JOIN AS PARTICIPANT
           </a>
         </div>
 

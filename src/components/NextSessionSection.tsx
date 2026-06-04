@@ -28,8 +28,8 @@ const options = [
     label: "join as a participant",
     body: "Contribute ideas, perspectives, and feedback while taking part in real startup conversations.",
     cta: "Join as a participant",
-    href: "https://luma.com/cll39l2p",
-    external: true,
+    href: "https://luma.com/event/evt-66JTb6qzo1hSvnc",
+    lumaEventId: "evt-66JTb6qzo1hSvnc",
     primary: false,
   },
 ];

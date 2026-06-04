@@ -41,7 +41,7 @@ export function WineSwirl() {
         <img
           src={logo.url}
           alt="Winestorming"
-          className="relative z-10 w-[320px] max-w-[80vw] h-auto select-none md:w-[400px]"
+          className="relative z-10 w-[400px] max-w-[85vw] h-auto select-none md:w-[520px]"
           style={{ animation: "ws-fade-up 1s ease-out both" }}
         />
 

@@ -1,7 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
-import favicon from "../assets/favicon.png.asset.json";
+import favicon from "../assets/favicon.png";
 
 function NotFoundComponent() {
   return (

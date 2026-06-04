@@ -38,7 +38,7 @@ function Index() {
 
         <h1
           className="relative z-10 -mt-16 max-w-4xl font-display text-5xl font-semibold leading-[1.05] text-deep-wine md:-mt-24 md:text-7xl"
-          style={{ animation: "ws-clarify 1.6s cubic-bezier(0.2,0.7,0.2,1) 2.8s both" }}
+          style={{ animation: "ws-clarify 0.8s cubic-bezier(0.2,0.7,0.2,1) 0.3s both" }}
         >
           Where startups get{" "}
           <em className="font-display italic text-wine">refined.</em>
@@ -46,7 +46,7 @@ function Index() {
 
         <p
           className="relative z-10 mt-3 max-w-xl text-base leading-relaxed text-charcoal/70 md:text-lg"
-          style={{ animation: "ws-clarify-sub 1.4s ease-out 3.6s both" }}
+          style={{ animation: "ws-clarify-sub 0.7s ease-out 0.7s both" }}
         >
           A collaborative startup discussion night where founders openly share
           real challenges and participants help shape better solutions.
@@ -54,7 +54,7 @@ function Index() {
 
         <div
           className="relative z-10 mt-6 flex flex-col items-center gap-4 sm:flex-row"
-          style={{ animation: "ws-fade-up 1s ease-out 4.2s both" }}
+          style={{ animation: "ws-fade-up 0.6s ease-out 1.0s both" }}
         >
           <a
             href="#apply"

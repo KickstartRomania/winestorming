@@ -23,7 +23,7 @@ export function ConceptSection() {
     <section className="relative w-full px-6 py-16 md:py-24">
       <div
         ref={ref}
-        className="mx-auto grid max-w-6xl grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-[1.15fr_1fr] md:items-start"
+        className="mx-auto grid max-w-5xl grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-[1fr_1fr] md:items-start"
       >
         {/* Left — title + description */}
         <div>

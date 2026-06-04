@@ -14,7 +14,7 @@ const seats = [
     label: "bring a challenge",
     body: "Apply as a startup and bring 1–3 questions, decisions, or problems you’d like the room to help refine.",
     tags: ["positioning", "pricing", "product", "growth", "partnerships"],
-    cta: "Apply as a startup",
+    cta: "APPLY AS STARTUP",
     href: "#apply",
     lumaEventId: undefined as string | undefined,
     primary: true,
@@ -96,9 +96,12 @@ export function ChooseYourSeatSection() {
                       : "group/cta inline-flex items-center gap-2 rounded-full border border-wine/30 px-8 py-4 font-body text-sm font-medium uppercase tracking-[0.18em] text-wine transition-all duration-300 hover:-translate-y-0.5 hover:border-wine/60 hover:bg-wine/5"
                   }
                 >
-                  {seat.cta}
-                  <span className="transition-transform duration-300 group-hover/cta:translate-x-1">
-                    →
+                  <span className="text-center leading-tight">
+                    {seat.cta}
+                    <br />
+                    <span className="inline-block transition-transform duration-300 group-hover/cta:translate-x-1">
+                      →
+                    </span>
                   </span>
                 </a>
               </div>

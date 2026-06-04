@@ -20,7 +20,7 @@ const options = [
   {
     label: "apply as a startup",
     body: "Bring your startup and 1–3 challenges you’d like the room to help refine.",
-    cta: "Apply as a startup",
+    cta: "APPLY AS STARTUP",
     href: "#apply",
     lumaEventId: undefined as string | undefined,
     primary: false,
@@ -121,9 +121,12 @@ export function NextSessionSection() {
                       : "group/cta inline-flex items-center gap-2 rounded-full border border-wine/30 px-8 py-4 font-body text-sm font-medium uppercase tracking-[0.18em] text-wine transition-all duration-300 hover:-translate-y-0.5 hover:border-wine/60 hover:bg-wine/5"
                   }
                 >
-                  {option.cta}
-                  <span className="transition-transform duration-300 group-hover/cta:translate-x-1">
-                    →
+                  <span className="text-center leading-tight">
+                    {option.cta}
+                    <br />
+                    <span className="inline-block transition-transform duration-300 group-hover/cta:translate-x-1">
+                      →
+                    </span>
                   </span>
                 </a>
               </div>

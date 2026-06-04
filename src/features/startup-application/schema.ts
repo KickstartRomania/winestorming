@@ -66,7 +66,7 @@ export const startupApplicationSchema = z.object({
   available_for_event: z.enum(["yes", "no"], {
     required_error: "Please confirm whether you can attend the event.",
   }),
-  additional_notes: z.string().default(""),
+  additional_notes: z.string(),
 });
 
 export type StartupApplicationFormValues = z.infer<typeof startupApplicationSchema>;

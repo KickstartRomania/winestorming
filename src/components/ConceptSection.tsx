@@ -23,10 +23,10 @@ export function ConceptSection() {
     <section className="relative w-full px-6 py-16 md:py-24">
       <div
         ref={ref}
-        className="mx-auto grid max-w-5xl grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-[1fr_1fr] md:items-start"
+        className="mx-auto grid max-w-5xl grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-[1fr_1fr] md:items-stretch"
       >
         {/* Left — title + description */}
-        <div>
+        <div className="flex flex-col justify-between">
           <h2
             className="font-display text-4xl font-semibold leading-[1.1] text-deep-wine md:text-5xl"
             style={revealStyle(inView, 0.12)}
@@ -47,13 +47,13 @@ export function ConceptSection() {
         </div>
 
         {/* Right — contrast lists */}
-        <div className="grid grid-cols-2 gap-x-8 md:pt-2">
+        <div className="grid grid-cols-2 gap-x-8">
           {/* what it isn't */}
-          <div style={revealStyle(inView, 0.4)}>
+          <div className="flex flex-col" style={revealStyle(inView, 0.4)}>
             <h3 className="font-display text-sm italic text-charcoal/45 md:text-base">
               what it isn’t
             </h3>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 flex flex-1 flex-col justify-between">
               {isnt.map((item) => (
                 <li
                   key={item}
@@ -67,13 +67,13 @@ export function ConceptSection() {
 
           {/* what it is */}
           <div
-            className="border-l border-wine/15 pl-8"
+            className="flex flex-col border-l border-wine/15 pl-8"
             style={revealStyle(inView, 0.52)}
           >
             <h3 className="font-display text-sm italic text-wine md:text-base">
               what it is
             </h3>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 flex flex-1 flex-col justify-between">
               {is.map((item) => (
                 <li
                   key={item}
@@ -86,6 +86,7 @@ export function ConceptSection() {
           </div>
         </div>
       </div>
+
     </section>
   );
 }

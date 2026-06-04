@@ -60,7 +60,7 @@ export function OutcomesSection() {
         </div>
 
         {/* Outcomes */}
-        <div className="relative mx-auto mt-20 max-w-4xl md:mt-28">
+        <div className="relative mx-auto mt-14 max-w-4xl md:mt-16">
           {/* Central connecting line */}
           <div className="pointer-events-none absolute bottom-0 left-1/2 top-0 hidden w-px -translate-x-1/2 md:block">
             <div className="h-full w-px bg-wine/10" />

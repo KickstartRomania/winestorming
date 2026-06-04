@@ -45,7 +45,7 @@ function Index() {
         </h1>
 
         <p
-          className="relative z-10 mt-3 max-w-xl text-base leading-relaxed text-charcoal/70 md:text-lg"
+          className="relative z-10 mt-8 max-w-xl text-base leading-relaxed text-charcoal/70 md:text-lg"
           style={{ animation: "ws-clarify-sub 0.7s ease-out 0.7s both" }}
         >
           A collaborative startup discussion night where founders openly share
@@ -53,7 +53,7 @@ function Index() {
         </p>
 
         <div
-          className="relative z-10 mt-6 flex flex-col items-center gap-4 sm:flex-row"
+          className="relative z-10 mt-12 flex flex-col items-center gap-4 sm:flex-row"
           style={{ animation: "ws-fade-up 0.6s ease-out 1.0s both" }}
         >
           <a

@@ -47,7 +47,7 @@ export function WineSwirl() {
 
         {/* soft wine-tinted glow behind the glass */}
         <div
-          className="absolute left-1/2 top-[55%] h-[160px] w-[900px] max-w-[120vw] -translate-x-1/2 rounded-full blur-3xl"
+          className="absolute left-1/2 top-[55%] h-[160px] w-[900px] max-w-[120vw] -translate-x-1/2 rounded-full"
           style={{
             background:
               "radial-gradient(ellipse at center, color-mix(in oklab, var(--wine) 18%, transparent), color-mix(in oklab, var(--rose) 8%, transparent) 50%, transparent 75%)",

@@ -5,21 +5,18 @@ const normalizeUrl = (value: string) => {
   if (!trimmed) {
     return trimmed;
   }
-
   return /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`;
 };
 
 const requiredText = (label: string, minLength = 1) =>
   z
-    .string({ required_error: `${label} is required.` })
-    .trim()
+    .string()
     .min(1, `${label} is required.`)
     .min(minLength, `${label} must be at least ${minLength} characters.`);
 
 const requiredUrl = (label: string) =>
   z
-    .string({ required_error: `${label} is required.` })
-    .trim()
+    .string()
     .min(1, `${label} is required.`)
     .transform(normalizeUrl)
     .pipe(z.string().url(`Enter a valid ${label.toLowerCase()}.`));
@@ -41,8 +38,7 @@ export const startupApplicationSchema = z.object({
   first_name: requiredText("First name"),
   last_name: requiredText("Last name"),
   email: z
-    .string({ required_error: "Email address is required." })
-    .trim()
+    .string()
     .min(1, "Email address is required.")
     .email("Enter a valid email address."),
   phone_number: requiredText("Phone number", 7),
@@ -60,29 +56,17 @@ export const startupApplicationSchema = z.object({
       .split("\n")
       .map((line) => line.trim())
       .filter(Boolean);
-
     if (lines.length === 0) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        message: "List at least one question for the room.",
-      });
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: "List at least one question for the room." });
     }
-
     if (lines.length > 3) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        message: "Please keep this to a maximum of 3 questions.",
-      });
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: "Please keep this to a maximum of 3 questions." });
     }
   }),
   available_for_event: z.enum(["yes", "no"], {
     required_error: "Please confirm whether you can attend the event.",
   }),
-  additional_notes: z
-    .string()
-    .trim()
-    .catch("")
-    .transform((value) => value || ""),
+  additional_notes: z.string().default(""),
 });
 
 export type StartupApplicationFormValues = z.infer<typeof startupApplicationSchema>;

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import glass from "@/assets/winestorming-glass.png";
+import logo from "@/assets/winestorming-logo.png.asset.json";
 
 export function WineSwirl() {
   const ref = useRef<HTMLDivElement>(null);
@@ -37,11 +37,11 @@ export function WineSwirl() {
       style={{ transform: "translate(var(--mx,0), var(--my,0))", transition: "transform 0.25s ease-out" }}
     >
       <div className="relative">
-        {/* Wine glass */}
+        {/* Winestorming logo */}
         <img
-          src={glass}
-          alt=""
-          className="relative z-10 h-[260px] w-auto md:h-[340px] select-none"
+          src={logo.url}
+          alt="Winestorming"
+          className="relative z-10 w-[440px] max-w-[88vw] h-auto select-none md:w-[600px]"
           style={{ animation: "ws-fade-up 1s ease-out both" }}
         />
 

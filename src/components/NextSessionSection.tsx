@@ -112,6 +112,8 @@ export function NextSessionSection() {
               <div className="mt-auto pt-10">
                 <a
                   href={option.href}
+                  target={option.href?.startsWith("http") ? "_blank" : undefined}
+                  rel={option.href?.startsWith("http") ? "noopener noreferrer" : undefined}
                   className={
                     option.primary
                       ? "group/cta inline-flex items-center gap-2 rounded-full bg-cream px-8 py-4 font-body text-sm font-medium uppercase tracking-[0.18em] text-deep-wine shadow-[0_10px_30px_-12px_rgba(0,0,0,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-cream/90"

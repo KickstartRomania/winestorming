@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import logo from "@/assets/winestorming-logo.png.asset.json";
+import logo from "@/assets/winestorming-logo.png";
 
 export function WineSwirl() {
   const ref = useRef<HTMLDivElement>(null);

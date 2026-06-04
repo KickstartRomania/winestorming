@@ -38,7 +38,7 @@ export function ConceptSection() {
           </h2>
 
           <p
-            className="mt-6 max-w-md text-base leading-relaxed text-charcoal/70 md:text-lg"
+            className="mt-6 max-w-lg text-base leading-relaxed text-charcoal/70 md:text-lg"
             style={revealStyle(inView, 0.24)}
           >
             Winestorming is where founders bring real startup challenges, and the

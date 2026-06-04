@@ -11,7 +11,7 @@ function revealStyle(inView: boolean, delay: number): React.CSSProperties {
 
 const details = [
   { label: "location", value: "Bucharest" },
-  { label: "date", value: "15 June 2026" },
+  { label: "date", value: "18 June 2026" },
   { label: "capacity", value: "~30 participants" },
   { label: "startups", value: "3–5 selected startups" },
 ];

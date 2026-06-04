@@ -47,14 +47,6 @@ export function WhyItWorksSection() {
             </span>
           </h2>
 
-          <p
-            className="mx-auto mt-8 max-w-xl text-base leading-relaxed text-charcoal/70 md:text-lg"
-            style={revealStyle(inView, 0.24)}
-          >
-            Founders rarely need another room full of people telling them what to
-            do. They need thoughtful questions, diverse perspectives, and honest
-            conversations that help them see their challenges differently.
-          </p>
         </div>
 
         {/* Main grid */}
